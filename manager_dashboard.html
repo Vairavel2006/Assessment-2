@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body class="background">
+    <nav>
+        <h1>Manager Dashboard</h1>
+        <ul class="nav-links">
+            <li><a href="#" class="nav-link" data-target="view-requests">View Leave Requests</a></li>
+            <li><a href="#" class="nav-link" data-target="team-attendance">View Team Attendance</a></li>
+            <li><a href="#" class="nav-link" data-target="run-reports">Run Reports</a></li>
+        </ul>
+    </nav>
+    
+    <div class="dashboard-wrapper">
+        <div class="dashboard-container">
+            <section id="view-requests" class="content-section">
+                <h2>Leave Requests</h2>
+                <div id="manager-requests">
+                    <p>No new requests</p>
+                </div>
+            </section>
+
+            <section id="team-attendance" class="content-section" style="display: none;">
+                <h2>Team Attendance</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Employee</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>2025-02-27</td>
+                            <td>Present</td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>2025-02-27</td>
+                            <td>Absent</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="run-reports" class="content-section" style="display: none;">
+                <h2>Generate Reports</h2>
+                <form id="report-form">
+                    <label for="report-type">Select Report Type:</label>
+                    <select id="report-type" required>
+                        <option value="attendance">Attendance Report</option>
+                        <option value="leave">Leave Report</option>
+                    </select>
+                    <button type="submit">Generate Report</button>
+                </form>
+            </section>
+        </div>
+    </div>
+    
+    <a href="index.html" class="logout">Logout</a>
+</body>
+</html>

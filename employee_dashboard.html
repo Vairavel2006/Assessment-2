@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body class="background">
+    <nav>
+        <h1>Employee Dashboard</h1>
+        <ul>
+            <li><a href="#" class="nav-link" data-target="log-hours">Log Working Hours</a></li>
+            <li><a href="#" class="nav-link" data-target="request-leave">Request Leave</a></li>
+            <li><a href="#" class="nav-link" data-target="leave-balance">Check Leave Balance</a></li>
+        </ul>
+    </nav>
+    
+    <div class="dashboard-container">
+        <section id="log-hours" class="content-section">
+            <h2>Log Working Hours</h2>
+            <form id="timesheet-form">
+                <label>Date: <input type="date" id="date" required></label>
+                <label>Hours Worked: <input type="number" id="hours" required></label>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="request-leave" class="content-section" style="display: none;">
+            <h2>Request Leave</h2>
+            <form id="leave-form">
+                <label>Leave Date: <input type="date" id="leave-date" required></label>
+                <label>Reason: <input type="text" id="reason" required></label>
+                <button type="submit">Request Leave</button>
+            </form>
+        </section>
+
+        <section id="leave-balance" class="content-section" style="display: none;">
+            <h2>Check Leave Balance</h2>
+            <p>Remaining Leave Balance: <span id="leave-balance-count">10</span></p>
+        </section>
+        
+        <a href="index.html">Logout</a>
+    </div>
+</body>
+</html>
